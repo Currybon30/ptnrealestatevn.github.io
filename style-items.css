@@ -255,8 +255,8 @@ body
     margin-bottom: 24px;
     opacity: 1;
 }
-.productimg {
-    margin-left: 30%;
+.productimg img {
+  display: block; margin-left: auto; margin-right: auto;
 }
 .total{
     background-color:#F6ECEC;
@@ -325,7 +325,9 @@ table {
   .mapdetail{
     margin-top:10px;
     padding-bottom:10px;
-    padding-left: 230px;
+  }
+  .mapdetail iframe{
+    display: block; margin-left: auto; margin-right: auto;
   }
   @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 

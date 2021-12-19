@@ -98,61 +98,62 @@ body
     margin-right: auto;
     margin-left: auto;
 }
-#slider {
-  position: relative;
-  width: 1000px;
-  height: 700px;
-  overflow: hidden;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-}
-#slider ul {
-  position: relative;
-  list-style: none;
-  height: 100%;
-  width: auto;
-  padding: 0;
+* {
   margin: 0;
-  transition: all 750ms ease;
-  left: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#slider ul li {
+.slidemain {
+  margin: 0 auto;
+  width: 60%;
+  height: 600px;
   position: relative;
-  height: 100%;
- 
-  float: left;
+  overflow: hidden;
 }
-#slider ul li img{
-  width: 1000px;
-  height: 700px;
+.slides {
+  display: flex;
+  height: 500px;
 }
- 
-#slider #prev, #slider #next {
-  width: 50px;
-  line-height: 50px;
-  border-radius: 50%;
-  font-size: 2rem;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  text-align: center;
-  color: white;
-  text-decoration: none;
+.slide {
+  min-width: 102%;
+  position: relative;
+}
+.slide img {
+  width: 100%;
+  height: 650px;
+}
+.slide-controls {
   position: absolute;
   top: 50%;
+  left: 0;
   transform: translateY(-50%);
-  transition: all 150ms ease;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-#slider #prev:hover, #slider #next:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  text-shadow: 0;
+#next-btn,
+#prev-btn {
+  cursor: pointer;
+  background: transparent;
+  font-size: 30px;
+  border: none;
+  padding: 10px;
+  color: white;
 }
-#slider #prev {
-  left: 10px;
+#next-btn:focus,
+#prev-btn:focus {
+  outline: none;
 }
-#slider #next {
-  right: 10px;
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  font-size: 60px;
+  color: white;
 }
-.center-slide{
-    padding-left: 250px;
-}
+
 .label
 {
     float: left;
@@ -256,7 +257,7 @@ section {
   width: 100%;
   display: inline-block;
   background: white;
-  height: 45px;
+  height: 50px;
   text-align: center;
   font-size: 14px;
   font-weight: 700;
@@ -365,8 +366,9 @@ section {
 .mainpagedt img{
 width: 55%;
 height: 500px;
-padding-left: 350px;
+display: block; margin-left: auto; margin-right: auto;
 }
+
 
 
 
