@@ -1,0 +1,344 @@
+<html>
+<head>
+    <title>Website bất động sản số 1 Việt Nam - PTN real estate</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+<body>
+    <div class="menu-bar">
+        <div class="logo"><a href="index.html"><img src="ptn.png" width="130px"></a></div>
+        <ul>
+        <li class="home"><a href="index.html"><i class="fas fa-home"></i>Trang chủ</a></li>
+        <li><a href="#"><i class="fas fa-sign"></i>Nhà đất thuê</a>
+            <div class="sub-menu-1">
+              <ul>
+                  <li><a href="canchungcu.html">Căn chung cư</a></li>
+                  <li><a href="nharieng.html">Nhà riêng</a></li>
+                  <li><a href="matpho.html">Mặt phố</a></li>
+              </ul>  
+            </div>
+            </li>
+        <li><a href="doitac.html"><i class="fas fa-praying-hands"></i>Đối tác</a>
+          </li>
+          <li><a href="aboutus.html"><i class="fas fa-address-card"></i>About us</a>
+          </li>
+        <li><a href="#"><i class="fas fa-phone"></i>Liên hệ</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="contactchat.html" target="_blank">Chat with us</a></li>
+                    <li><a href="contactlater.html" target="_blank">Contact later</a></li>
+                </ul>  
+              </div>
+              </li>
+    </ul>
+    <div class="loginsite">
+        <ul>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i>Login</a>
+            <li><a href="signup.html"><i class="fas fa-user-plus"></i>Sign Up</a>
+        </ul>
+    </div>
+    </div>
+    <div class="center-slide">
+    <div id="slider">
+        <ul id="slideWrap"> 
+          <li><img src="https://scontent.fhan2-2.fna.fbcdn.net/v/t1.6435-9/76775061_1039705879704977_6789904619901288448_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=e3f864&_nc_ohc=R5Wb1ZcH0tIAX8Gupuw&_nc_ht=scontent.fhan2-2.fna&oh=00_AT-bPJgPb4Lb8TS6ImX6y466LiqmfgjMglLbgG4BfnilsA&oe=61DC1056" alt=""></li>
+          <li><img src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.6435-9/60727657_885923011749932_5475045492272398336_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=19026a&_nc_ohc=gYEc1IOPWzAAX9Jzw26&tn=n459RkTO0s0AEije&_nc_ht=scontent.fhan2-3.fna&oh=00_AT_GUskBdlgXjix0GtyGbd2dImm2KoL-YK9ZlUyw4Zf-jQ&oe=61DC8DC8" alt=""></li>
+          <li><img src="https://scontent.fdad3-1.fna.fbcdn.net/v/t1.6435-9/p960x960/170259180_3515733875199702_4190021533519774361_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=e3f864&_nc_ohc=-VnrYmzXa9IAX_fjiZP&_nc_ht=scontent.fdad3-1.fna&oh=00_AT8VPANl4FR-tp8aKFUNit3XZCGoEoR05e5ogm9S-NLpMg&oe=61DDD34D" alt=""></li>
+          <li><img src="https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/258870311_4159901037449646_8680019582749293670_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=srW7SCIZQB4AX9fMU9g&_nc_oc=AQm_nRWuLeyOxzk330BvUukL4_fky1dchtjeE-SX08gZMTNKS1rYND7Zdtj2a7KXL_ARqaX-CwWjl54WyisI0q_C&tn=n459RkTO0s0AEije&_nc_ht=scontent.fdad3-5.fna&oh=00_AT8ZIVNTUzHP-t8EGgeCI1BrAooYXIsV-oKfr5rfyr9goQ&oe=61BDF5D7" alt=""></li>
+        </ul>
+        <a id="prev" href="#">&#8810;</a>
+        <a id="next" href="#">&#8811;</a>
+      </div>
+      </div>
+      <script>
+        var responsiveSlider = function() {
+    
+    var slider = document.getElementById("slider");
+    var sliderWidth = slider.offsetWidth;
+    var slideList = document.getElementById("slideWrap");
+    var count = 1;
+    var items = slideList.querySelectorAll("li").length;
+    var prev = document.getElementById("prev");
+    var next = document.getElementById("next");
+    
+    window.addEventListener('resize', function() {
+      sliderWidth = slider.offsetWidth;
+    });
+    
+    var prevSlide = function() {
+      if(count > 1) {
+        count = count - 2;
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+      else if(count = 1) {
+        count = items - 1;
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+    };
+    
+    var nextSlide = function() {
+      if(count < items) {
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+      else if(count = items) {
+        slideList.style.left = "0px";
+        count = 1;
+      }
+    };
+    
+    next.addEventListener("click", function() {
+      nextSlide();
+    });
+    
+    prev.addEventListener("click", function() {
+      prevSlide();
+    });
+    
+    setInterval(function() {
+      nextSlide()
+    }, 5000);
+    
+    };
+    
+    window.onload = function() {
+    responsiveSlider();  
+    }
+    
+    
+      </script>
+    <div class="main_block">
+        <div class="main_block-container">
+<h2 class="label">Bất động sản dành cho bạn</h2>
+<span class="main_block-link">
+    <a class="link-se" href="canchungcu.html">Tin tức nhà đất cho thuê</a>
+     &nbsp;&nbsp;|&nbsp;&nbsp;
+     <a class="link-se" href="doitac.html">Đối tác</a>
+</span>
+</div>
+</div>
+<div id="main-content">
+<div id="content">
+    <div id="products">
+        <div class="product">
+            <div class="p-img">
+                <img src="https://i.ibb.co/zbRnQjp/1-1.jpg" width="350" height="200">
+            </div>
+            <div class="text1">
+                <div class="p-name"><a href="item1.html">Bán nhà góc 2MT đường Trần Tuấn Khải, Q5, DT 4,5x15m, đang cho thuê 50tr, giá 21.5 tỷ</a></div>
+            </div>
+            <div class="text">	
+                <span class="p-cat" >21.5 tỷ</span>
+                <span class="p-dot">·</span>
+                <span class="p-cat" >100 m²</span>
+                <div class="p-price" >Quận 5  </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="product">
+            <div class="p-img">
+                <img src="https://i.ibb.co/7X9b0Z3/2-1.jpg" width="350" height="200">
+            </div>
+            <div class="text1">
+                <div class="p-name"><a href="item2.html">Ngộp ngân hàng bán nhanh căn biệt thự tâm huyết 500m2 Phường Thảo Điền Q2. Chỉ 68 tỷ</a></div>
+            </div>
+            <div class="text">	
+                <span class="p-cat" >68 tỷ</span>
+                <span class="p-dot">·</span>
+                <span class="p-cat" >500 m²</span>
+                <div class="p-price" >Quận 2  </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="product">
+            <div class="p-img">
+                <img src="https://i.ibb.co/hKJHrDB/3-1.jpg" width="350" height="200">
+            </div>
+            <div class="text1">
+                <div class="p-name"><a href="item3.html">Hot! Bán gấp biệt thự đẹp MT khu 204B đường Nguyễn Văn Hưởng, Thảo Điền, 8,5x18m,...</a></div>
+            </div>
+            <div class="text">	
+                <span class="p-cat" >28 tỷ</span>
+                <span class="p-dot">·</span>
+                <span class="p-cat" >100 m²</span>
+                <div class="p-price" >Quận 2  </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="product">
+            <div class="p-img">
+                <img src="https://i.ibb.co/gRCFLhr/4-1.jpg" width="350" height="200">
+            </div>
+            <div class="text1">
+                <div class="p-name"><a href="item4.html">Bán biệt thự Vaco Nguyễn Văn Hưởng Thảo Điền, Quận 2, DT: 10x16m giá 29 tỷ TL</a></div>
+            </div>
+            <div class="text">	
+                <span class="p-cat" >29 tỷ</span>
+                <span class="p-dot">·</span>
+                <span class="p-cat" >100 m²</span>
+                <div class="p-price" >Quận 2  </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="product">
+            <div class="p-img">
+                <img src="https://i.ibb.co/DpN48Pz/5-1.jpg" width="350" height="200">
+            </div>
+            <div class="text1">
+                <div class="p-name"><a href="item5.html">Biệt thự sân vườn hồ bơi Thảo Điền, Quận 3 - 184m2 - 35 tỷ</a></div>
+            </div>
+            <div class="text">	
+                <span class="p-cat" >35 tỷ</span>
+                <span class="p-dot">·</span>
+                <span class="p-cat" >184 m²</span>
+                <div class="p-price" >Quận 3  </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="product">
+            <div class="p-img">
+                <img src="https://i.ibb.co/FBt7bBF/6-1.jpg" width="350" height="200">
+            </div>
+            <div class="text1">
+                <div class="p-name"><a href="item6.html">Kẹt tiền bán gấp nhà phố liền kề diện tích 126m2 dự án Vinhomes Grand Park Quận 9 giá 18 tỷ</a></div>
+            </div>
+            <div class="text">	
+                <span class="p-cat" >18 tỷ</span>
+                <span class="p-dot">·</span>
+                <span class="p-cat" >126 m²</span>
+                <div class="p-price" >Quận 9  </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="product">
+            <div class="p-img">
+                <img src="https://i.ibb.co/Zz7WBF6/7-1.jpg" width="350" height="200">
+            </div>
+            <div class="text1">
+                <div class="p-name"><a href="item7.html">BIỆT THỰ KHU COMPOUND TRẦN NÃO VIEW TRỰC DIỆN SÔNG, LANDMARK 81,...</a></div>
+            </div>
+            <div class="text">	
+                <span class="p-cat" >42 tỷ</span>
+                <span class="p-dot">·</span>
+                <span class="p-cat" >100 m²</span>
+                <div class="p-price" >LANDMARK 81  </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="product">
+            <div class="p-img">
+                <img src="https://i.ibb.co/rtLs9nV/8-1.jpg" width="350" height="200">
+            </div>
+            <div class="text1">
+                <div class="p-name"><a href="item8.html">Hàng hiếm, biệt thự đơn lập ven sông khu V3, 580m2 - giá 92,8 tỷ,...</a></div>
+            </div>
+            <div class="text">	
+                <span class="p-cat" >92.8 tỷ</span>
+                <span class="p-dot">·</span>
+                <span class="p-cat" >580 m²</span>
+                <div class="p-price" >Quận 7  </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="product">
+            <div class="p-img">
+                <img src="https://i.ibb.co/Pr1cgR2/9-1.jpg" width="350" height="200">
+            </div>
+            <div class="text1">
+                <div class="p-name"><a href="item9.html">Duy nhất 1 lô biệt thự siêu vip ngay biển nhân tạo trong mà các đại gia đang săn tìm 463m2</a></div>
+            </div>
+            <div class="text">	
+                <span class="p-cat" >463 tỷ</span>
+                <span class="p-dot">·</span>
+                <span class="p-cat" >463 m²</span>
+                <div class="p-price" >Quận 1  </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="product">
+            <div class="text">
+                <div class="p-name"><a href="#"></a></div>
+            </div>
+            <div class="p-img">
+                <img src="https://voicefun.vn/media/ugc_storage/avatar/2017/03/09/14/58c1025a48b6f.jpg" width="200" height="200">
+            </div>
+            <div class="text">	
+                <div class="p-cat1" >Lô đất đang được cập nhật</div>
+                <div class="p-cat1" >Vui lòng chờ xin cảm ơn! </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="product">
+            <div class="text">
+                <div class="p-name"><a href="#"></a></div>
+            </div>
+            <div class="p-img">
+                <img src="https://voicefun.vn/media/ugc_storage/avatar/2017/03/09/14/58c1025a48b6f.jpg" width="200" height="200">
+            </div>
+            <div class="text">	
+                <div class="p-cat1" >Lô đất đang được cập nhật</div>
+                <div class="p-cat1" >Vui lòng chờ xin cảm ơn! </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="product">
+            <div class="text">
+                <div class="p-name"><a href="#"></a></div>
+            </div>
+            <div class="p-img">
+                <img src="https://voicefun.vn/media/ugc_storage/avatar/2017/03/09/14/58c1025a48b6f.jpg" width="200" height="200">
+            </div>
+            <div class="text">	
+                <div class="p-cat1" >Lô đất đang được cập nhật</div>
+                <div class="p-cat1" >Vui lòng chờ xin cảm ơn! </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- footer content -->
+
+
+<section>
+    <p style="font-size: 16px; font-weight: bold;">PTN - Website Bất Động Sản số 1 Việt Nam </p>
+    Vui lòng liên hệ trước khi lấy trong website
+</section>
+
+<footer class="footer-distributed">
+
+    <div class="footer-right">
+
+        <a href="https://www.facebook.com/curry.jamesbasketballismylife/"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/_nothing.but.bonn/"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+
+    </div>
+
+    <div class="footer-left">
+
+        <p class="footer-links">
+            <a class="link-1" href="index.html">Home</a>
+
+            <a href="login.html">Login</a>
+
+            <a href="signup.html">Sign up</a>
+
+
+            <a href="contactchat.html">Contact</a>
+        </p>
+
+        <p>PTN - Just buy &copy; 2021</p>
+    </div>
+
+</footer>
+
+</div>
+</body>
+</html>
