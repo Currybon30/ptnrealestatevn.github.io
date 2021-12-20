@@ -6,7 +6,9 @@ const BOT_MSGS = [
   "Xin chào! Tôi là BOT, bạn cần gì?",
   "Hiện tại chúng tôi đang vắng mặt. Vui lòng để lại tin nhắn!",
   "Chào!",
-  "Tôi đang buồn ngủ!"
+  "Tôi đang buồn ngủ!",
+  "Tôi là BOT, bạn cần tôi hỗ trợ gì?",
+  "Tôi là BOT, bạn cần tôi hỗ trợ gì? Để gặp trực tiếp nhân viên CSKH vui lòng liên hệ 0888082324",
 ];
 
 // Icons made by Freepik from www.flaticon.com
